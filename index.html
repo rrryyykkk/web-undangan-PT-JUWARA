@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pertemuan Peternak JUN 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              soil: "#3b2a1a",
+              bark: "#7a5230",
+              straw: "#c9a84c",
+              rice: "#faf6ee",
+              leaf: "#3a5a3c",
+              leaf2: "#4e7a52",
+            },
+            fontFamily: {
+              serif: ["Cormorant Garamond", "serif"],
+              sans: ["DM Sans", "sans-serif"],
+            },
+            keyframes: {
+              fadeUp: {
+                "0%": {
+                  opacity: "0",
+                  transform: "translateY(20px)",
+                },
+                "100%": {
+                  opacity: "1",
+                  transform: "translateY(0)",
+                },
+              },
+            },
+            animation: {
+              fadeUp: "fadeUp .6s ease forwards",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-rice font-sans text-[#1e1208]">
+    <!-- TOP STRIP -->
+    <div
+      class="h-[5px] bg-[repeating-linear-gradient(90deg,#3a5a3c_0,#3a5a3c_24px,#c9a84c_24px,#c9a84c_28px,#7a5230_28px,#7a5230_52px,#c9a84c_52px,#c9a84c_56px)]"
+    ></div>
+
+    <!-- HEADER -->
+    <header
+      class="relative overflow-hidden bg-soil px-6 pt-14 pb-16 text-center"
+    >
+      <div
+        class="absolute -top-24 -right-24 h-[340px] w-[340px] rounded-full bg-straw/10 blur-3xl"
+      ></div>
+
+      <div
+        class="absolute -bottom-16 -left-16 h-[220px] w-[220px] rounded-full bg-leaf/20 blur-3xl"
+      ></div>
+
+      <div class="relative z-10">
+        <!-- LOGO -->
+        <div
+          class="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-full border border-straw/40 p-2"
+        >
+          <img
+            src="logo.webp"
+            alt="Logo JUN"
+            class="h-full w-full rounded-full object-contain bg-white/5"
+            onerror="
+              this.style.display = 'none';
+              document.getElementById('fallback').style.display = 'flex';
+            "
+          />
+
+          <div
+            id="fallback"
+            class="hidden h-full w-full items-center justify-center rounded-full font-serif text-3xl font-bold text-straw"
+          >
+            JUN
+          </div>
+        </div>
+
+        <!-- BADGE -->
+        <div
+          class="mb-5 inline-block border border-straw/30 px-4 py-1 text-[11px] uppercase tracking-[0.2em] text-straw/70 animate-fadeUp"
+        >
+          Undangan Resmi · No: 001/PTR-JUN/V/2026
+        </div>
+
+        <!-- TEXT -->
+        <p
+          class="mb-2 text-[11px] uppercase tracking-[0.25em] text-straw/70 animate-fadeUp"
+        >
+          Mengundang Yth. Bapak / Ibu Peternak
+        </p>
+
+        <h1
+          class="font-serif text-5xl font-bold leading-tight text-white animate-fadeUp"
+        >
+          Pertemuan <br />
+          <span class="italic text-straw">Peternak JUN</span>
+        </h1>
+
+        <p class="mt-3 text-sm tracking-wider text-white/50 animate-fadeUp">
+          Bebek Pedaging · 2026
+        </p>
+
+        <!-- COUNTDOWN -->
+        <div class="mt-10 animate-fadeUp">
+          <p class="mb-4 text-[10px] uppercase tracking-[0.3em] text-straw/50">
+            Hitung Mundur
+          </p>
+
+          <div id="countdown" class="flex flex-wrap justify-center gap-3">
+            <div
+              class="rounded border border-straw/20 bg-white/5 px-4 py-3 text-center"
+            >
+              <div id="cd-day" class="font-serif text-4xl font-bold text-white">
+                --
+              </div>
+              <div
+                class="mt-1 text-[10px] uppercase tracking-widest text-straw/60"
+              >
+                Hari
+              </div>
+            </div>
+
+            <div
+              class="rounded border border-straw/20 bg-white/5 px-4 py-3 text-center"
+            >
+              <div
+                id="cd-hour"
+                class="font-serif text-4xl font-bold text-white"
+              >
+                --
+              </div>
+              <div
+                class="mt-1 text-[10px] uppercase tracking-widest text-straw/60"
+              >
+                Jam
+              </div>
+            </div>
+
+            <div
+              class="rounded border border-straw/20 bg-white/5 px-4 py-3 text-center"
+            >
+              <div id="cd-min" class="font-serif text-4xl font-bold text-white">
+                --
+              </div>
+              <div
+                class="mt-1 text-[10px] uppercase tracking-widest text-straw/60"
+              >
+                Menit
+              </div>
+            </div>
+
+            <div
+              class="rounded border border-straw/20 bg-white/5 px-4 py-3 text-center"
+            >
+              <div id="cd-sec" class="font-serif text-4xl font-bold text-white">
+                --
+              </div>
+              <div
+                class="mt-1 text-[10px] uppercase tracking-widest text-straw/60"
+              >
+                Detik
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CURVE -->
+      <div
+        class="absolute bottom-0 left-0 h-10 w-full rounded-t-[100%] bg-rice"
+      ></div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="mx-auto max-w-xl px-4 pb-16">
+      <!-- INTRO -->
+      <section class="py-10 text-center">
+        <div class="mb-4 text-straw/70">— ✦ —</div>
+
+        <p class="font-serif text-lg italic leading-8 text-bark">
+          Dengan hormat, kami mengundang Bapak/Ibu untuk hadir dalam pertemuan
+          guna mempererat silaturahmi dan membahas perkembangan kerja sama usaha
+          peternakan bebek pedaging bersama kami.
+        </p>
+
+        <div class="mt-4 text-straw/70">— ✦ —</div>
+      </section>
+
+      <!-- INFO -->
+      <section class="mb-6">
+        <div class="mb-4 flex items-center gap-3">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-bark">
+            Informasi Acara
+          </span>
+
+          <div
+            class="h-px flex-1 bg-gradient-to-r from-straw/40 to-transparent"
+          ></div>
+        </div>
+
+        <div
+          class="relative rounded bg-white p-6 shadow-sm border border-black/5"
+        >
+          <div
+            class="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-leaf to-straw"
+          ></div>
+
+          <div class="space-y-5">
+            <div class="flex">
+              <div class="w-28 text-xs uppercase tracking-widest text-bark">
+                Hari
+              </div>
+
+              <div>
+                <div class="font-serif text-xl font-semibold text-soil">
+                  Jumat, 15 Juni 2026
+                </div>
+
+                <div class="text-sm text-bark">Pertemuan Peternak</div>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="w-28 text-xs uppercase tracking-widest text-bark">
+                Waktu
+              </div>
+
+              <div>
+                <div class="font-serif text-xl font-semibold text-soil">
+                  13.00 WIB
+                </div>
+
+                <div class="text-sm text-bark">Pukul 1 siang</div>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="w-28 text-xs uppercase tracking-widest text-bark">
+                Tempat
+              </div>
+
+              <div>
+                <div class="font-serif text-xl font-semibold text-soil">
+                  Rumah Makan Mba Rum
+                </div>
+
+                <div class="text-sm text-bark">Lihat peta di bawah</div>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="w-28 text-xs uppercase tracking-widest text-bark">
+                Agenda
+              </div>
+
+              <div>
+                <div class="font-serif text-xl font-semibold text-soil">
+                  Pertemuan & Diskusi
+                </div>
+
+                <div class="text-sm text-bark">Peternak JUN</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AGENDA -->
+      <section class="mb-6">
+        <div class="mb-4 flex items-center gap-3">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-bark">
+            Agenda
+          </span>
+
+          <div
+            class="h-px flex-1 bg-gradient-to-r from-straw/40 to-transparent"
+          ></div>
+        </div>
+
+        <div
+          class="relative rounded bg-white p-6 shadow-sm border border-black/5"
+        >
+          <div
+            class="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-leaf to-straw"
+          ></div>
+
+          <div class="space-y-5">
+            <!-- ITEM -->
+            <div class="flex gap-4 border-b border-black/5 pb-4">
+              <div
+                class="flex h-8 w-8 items-center justify-center rounded-full border border-straw font-serif font-bold text-bark"
+              >
+                1
+              </div>
+
+              <div>
+                <div class="font-serif text-xl font-semibold text-soil">
+                  Evaluasi Perkembangan Usaha
+                </div>
+
+                <div class="text-sm text-bark">
+                  Tinjauan hasil dan capaian peternakan
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="flex gap-4 border-b border-black/5 pb-4">
+              <div
+                class="flex h-8 w-8 items-center justify-center rounded-full border border-straw font-serif font-bold text-bark"
+              >
+                2
+              </div>
+
+              <div>
+                <div class="font-serif text-xl font-semibold text-soil">
+                  Diskusi Kendala & Solusi
+                </div>
+
+                <div class="text-sm text-bark">
+                  Berbagi pengalaman dan solusi praktis
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="flex gap-4 border-b border-black/5 pb-4">
+              <div
+                class="flex h-8 w-8 items-center justify-center rounded-full border border-straw font-serif font-bold text-bark"
+              >
+                3
+              </div>
+
+              <div>
+                <div class="font-serif text-xl font-semibold text-soil">
+                  Program Kerja Sama
+                </div>
+
+                <div class="text-sm text-bark">
+                  Penyampaian peluang kolaborasi
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="flex gap-4">
+              <div
+                class="flex h-8 w-8 items-center justify-center rounded-full border border-straw font-serif font-bold text-bark"
+              >
+                4
+              </div>
+
+              <div>
+                <div class="font-serif text-xl font-semibold text-soil">
+                  Ramah Tamah
+                </div>
+
+                <div class="text-sm text-bark">Silaturahmi antar peternak</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAP -->
+      <section class="mb-6">
+        <div class="mb-4 flex items-center gap-3">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-bark">
+            Lokasi
+          </span>
+
+          <div
+            class="h-px flex-1 bg-gradient-to-r from-straw/40 to-transparent"
+          ></div>
+        </div>
+
+        <div
+          class="overflow-hidden rounded border border-black/10 bg-white shadow-sm"
+        >
+          <div class="p-5">
+            <div class="font-serif text-2xl font-semibold text-soil">
+              Rumah Makan Mba Rum
+            </div>
+
+            <div class="mt-1 text-sm text-bark">Tap peta untuk navigasi</div>
+          </div>
+
+          <iframe
+            class="h-[240px] w-full"
+            src="https://maps.google.com/maps?q=-7.4098,109.2403&z=15&output=embed"
+            loading="lazy"
+          ></iframe>
+
+          <div class="p-5">
+            <a
+              href="https://maps.app.goo.gl/paT2Dy9nYyDawZaJ6"
+              target="_blank"
+              class="flex items-center justify-center rounded border border-black/10 px-5 py-3 text-sm font-medium text-bark transition hover:bg-straw/10"
+            >
+              Buka di Google Maps
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- BUTTONS -->
+      <section class="mb-8">
+        <a
+          id="btn-wa"
+          href="#"
+          target="_blank"
+          class="mb-3 flex w-full items-center justify-center gap-2 rounded bg-[#128c7e] px-5 py-4 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-[#0f756a]"
+        >
+          Konfirmasi Kehadiran via WhatsApp
+        </a>
+
+        <button
+          onclick="saveCalendar()"
+          class="flex w-full items-center justify-center gap-2 rounded bg-leaf px-5 py-4 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-leaf2"
+        >
+          Simpan ke Kalender
+        </button>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="pt-10 text-center">
+        <div class="text-straw/70">— ✦ —</div>
+
+        <p class="mt-6 text-sm leading-7 text-bark">
+          Besar harapan kami agar Bapak/Ibu dapat hadir tepat waktu.
+          <br />
+          Atas perhatian dan kehadirannya, kami ucapkan terima kasih.
+        </p>
+
+        <p class="mt-6 text-sm text-bark/70">Hormat kami,</p>
+
+        <div
+          class="mx-auto mt-10 mb-2 w-[220px] border-b border-black/20 pb-1 font-serif text-lg font-semibold text-soil"
+        >
+          ( ................................ )
+        </div>
+
+        <p class="text-xs text-bark/60">Ketua Panitia / Penanggung Jawab</p>
+
+        <p class="mt-10 text-[11px] uppercase tracking-[0.2em] text-bark/40">
+          Pertemuan Peternak JUN · 2026
+        </p>
+      </footer>
+    </main>
+
+    <!-- BOTTOM STRIP -->
+    <div
+      class="h-[5px] bg-[repeating-linear-gradient(90deg,#7a5230_0,#7a5230_24px,#c9a84c_24px,#c9a84c_28px,#3a5a3c_28px,#3a5a3c_52px,#c9a84c_52px,#c9a84c_56px)]"
+    ></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
