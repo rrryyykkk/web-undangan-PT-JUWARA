@@ -1,6 +1,5 @@
 const CONFIG = {
   eventDate: new Date(2026, 4, 15, 13, 0, 0),
-  nomorWA: "6281234567890",
 };
 
 // ======================
@@ -40,22 +39,6 @@ setInterval(tick, 1000);
 // ======================
 // WHATSAPP BUTTON
 // ======================
-
-const pesan = encodeURIComponent(
-  `Assalamu'alaikum,
-
-Saya mengkonfirmasi kehadiran saya pada acara:
-
-*Pertemuan Peternak JUN*
-
-Nama:
-Status: Hadir / Tidak Hadir
-
-Terima kasih.`,
-);
-
-document.getElementById("btn-wa").href =
-  `https://wa.me/${CONFIG.nomorWA}?text=${pesan}`;
 
 // ======================
 // SAVE CALENDAR
